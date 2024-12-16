@@ -1,0 +1,13 @@
+body {
+    background-color: #5DB996;
+    color: #FBF6E9;   
+}
+
+strong {
+    color: #118B50;
+}
+
+h1 {
+    border: 1px solid #FBF6E9;
+    padding: 10px;
+}

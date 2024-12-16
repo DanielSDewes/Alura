@@ -1,0 +1,36 @@
+Anotações de comandos git do curso 2:
+
+git log --oneline // para ver somente as mensagens dos commits
+
+git log -p // comando que mostra alterações, se a linha tem - foi removida, se tem +, a linha foi adicionada
+
+git log --graph // mostra linha do tempo
+
+git log --format = "%H %an" (ou --pretty) // com isso, pode ver o hash e o autor do commit
+
+git log --help // trás uma documentação, busca a documentação de ajuda do git
+
+git show hashDoCommit //faz a mesma coisa q o -p mas só do commit do hash especificado -> sem especificar nenhum hash, irá mostrar as alterações do head
+
+HEAD -> significa o commit atual que nossa branch no repositório remoto se encontra
+
+git diff //mostra as alterações pendentes de commit que estão fora do stage
+mas para comparar as diferenças entre dois commits específicos usamos da sintaxe: git diff hashCommitMaisAntigo..hashCommitMaisRecente
+se eu especificar um único commit, ele vai comparar com o head
+
+O comando git show mostra o que foi alterado em um commit enquanto o git diff mostra a diferença entre 2 pontos.
+
+git branch -m nomeAtual novoNome //para renomear uma branch
+git branch -d nomeBranche //comando para remover uma branch, só é possível remover uma branch que você não está
+git branch nomeNovaBranch // comando para criar uma nova branch
+git checkout nomeNovaBranch // após criar a nova branch é necessário "se mudar" para ela, e para isso utlizamos esse comando
+
+Novo comando para unir criação e alteração de branch:
+git switch -c novaBranch
+
+git restore --source hashCommitQueSeraRestaurado arquivoRestaurará ou . (todos os arquivos)
+
+git merge nomeOutraBranch //se não houverem commits desde a criação da nova branch, o git só faz um "fast foward" mas se houveram commits, ele faz um commit de merge ("merge commit")
+e caso hajam conflitos, ele irá passar os conflitos para serem resolvidos 
+
+para remover a branch do repositório remoto (github) usa-se: git push origin:nomeBranchRemovida
