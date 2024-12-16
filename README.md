@@ -1,7 +1,7 @@
-<h1>Jogo do número secreto</h1>
+<h1>Cursos Alura</h1>
 
 <h2>	:rocket: Sobre</h2>
-<p>Projeto utilizado nos cursos de lógica de programação da Alura.</p>
+<p>Repositório criado para realizar o controle de versão dos códdigos escritos durantes a execução dos cursos da plataforma Alura.</p>
 
 ## :desktop_computer: Tecnologias
 <div>
