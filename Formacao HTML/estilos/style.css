@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-fundo: #000000;
+    --cor-botoes: #F5FFFA;
+    --cor-letras: #FBF6E9;
+    --cor-strong: #118B50;
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria:'Montserrat', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+    color: var(--cor-letras);   
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 12%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px; /* espaço entre os elementos */
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600; 
+    color: var(--cor-strong);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-letras);
+}
+
+.capa {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.125rem;
+}
+
+.titulo_destaque {
+    color: var(--cor-strong);
+}
+
+.eu {
+    border: solid #4B5945;
+    border-width: 0.5rem;
+    width: 30%;
+}
+
+.capa__conteudo {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.capa__conteudo__titulo {
+    font-size: 2.25rem; /* 16px = 1 rem */
+    font-family: var(--fonte-principal);
+}
+
+.capa__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.capa__conteudo__botoes {
+    display: flex;
+    flex-direction: column; /* direção na qual cada elemento do html é alinhada */
+    align-items: center; /* respeita a direção determinada pela propriedade flex-direction */
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.capa__conteudo__botoes__estilo {
+    /* background-color: var(--cor-strong); */
+    display: flex;
+    justify-content: center;
+    color: var(--cor-strong);
+    border: 2px solid var(--cor-strong);
+    width: 60%;
+    text-align: center;
+    border-radius: 16px; /* o quão arredondadas são as bordas */
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600; /* grossura da fonte */
+    background-color: var(--cor-botoes);
+    gap: 8px; /* espaço entre os elementos na div */
+}
+
+.capa__conteudo__botoes__estilo:hover { /* ação de passar o mouse por cima do botão */
+    background-color: var(--cor-letras);
+    font-size: 1.62rem;
+}
+
+.capa__conteudo__botoes__subtit {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.rodape {
+    display: flex;
+    background-color: var(--cor-strong);
+    color: var(--cor-botoes);
+    padding: 20px;
+    justify-content: space-between;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400; /* grossura da fonte */
+}
+
+.rodape__texto {
+    background-color: var(--cor-strong);
+    color: var(--cor-botoes);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400; /* grossura da fonte */
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+    
+    .cabecalho__menu {
+        justify-content: center; /* alinhamento dos itens na classe */
+
+    }
+
+    .capa {
+        flex-direction: column-reverse; /* propriedade de ordem da apresentação dos elementos dessa class. Column > Um abaixo do outro.| Row: Um ao lado do outro */
+        padding: 5%;
+    }
+
+    .capa__conteudo {
+        width: auto;
+    }
+
+    .eu {
+        width: 60%;
+    }
+}
